@@ -2,6 +2,7 @@
 
 body{
     background: #f6f5f7; 
+    background-image: url("bg.jpg");
     font-family: 'Nova Square', sans-serif;
     color: #3E363F;
 }
@@ -76,7 +77,6 @@ button:active {
 .resultado{
     color: #0A81D1;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 15px;
     margin-bottom: 5px;
-    display: none;
 }
