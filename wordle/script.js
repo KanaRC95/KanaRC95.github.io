@@ -1,7 +1,17 @@
+const endpoint = 'https://random-word-api.herokuapp.com/word?length=5';
 const words = ['beach', 'brave', 'haste', 'pluto', 'quest', 'apple'];
 let targetWord = selectRandomWord(words);
 let attemptsLeft = 3;
 window.addEventListener('load', init);
+
+
+fetch(endpoint).then((Response) => {
+  Response.json().then((data) => {
+    console.log(data[0]);
+    targetWord = data[0];
+  });
+});
+
 
 function selectRandomWord(wordList) {
   return wordList[Math.floor(Math.random() * wordList.length)];
@@ -13,14 +23,16 @@ function init(){
 
 function displayWord() {
   const wordContainer = document.getElementById('word-container');
-  wordContainer.textContent = targetWord.split('').map(letter => '_').join(' ');
+  //wordContainer.textContent = targetWord.split('').map(letter => '_').join(' ');
 }
 
+
 function checkGuess() {
+  
   const guessInput = document.getElementById('guessInput');
   const resultContainer = document.getElementById('result-container');
-
   const guess = guessInput.value.toLowerCase();
+  
   
   if (guess.length !== 5 || !/^[a-z]+$/.test(guess)) {
     resultContainer.textContent = 'Por favor, ingresa una palabra válida de 5 letras.';
