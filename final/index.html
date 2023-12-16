@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Formulario de Inscripcion</title>
+</head>
+<body>
+  <div class="contenedor">
+    <h3>Formulario de Inscripcion al Congreso</h3>
+    <div class="formulario">
+      <form action="" method="post" name="form-inscripcion">
+        <label for="field1"><span>Nombre <span class="required">*</span></span><input type="text" class="input-field" name="Nombre"  value="" required/></label>
+      <label for="field2"><span>Email <span class="required">*</span></span><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" class="input-field" placeholder="ejemplo@gmail.com" name="Mail" value="" required/></label>
+      <label><span>Celular</span><input type="text" class="tel-number-field" name="Celular" value="" maxlength="10" /></label>
+      <label for="field3"><span>Ocupacion</span><select name="Ocupacion" class="select-field">
+        <option value="Estudiante">Estudiante</option>
+        <option value="Educador">Educador</option>
+        <option value="Profesional">Profesional del Sector</option>
+        </select></label>  
+      <label for="field4"><span>Motivo</span><select name="Motivo" class="select-field">
+      <option value="General">General</option>
+      <option value="Aprendizaje">Aprendizaje</option>
+      <option value="Networking">Networking</option>
+      </select></label>
+      <input type="datetime" class="input-field fecha" name="Fecha" value="" id="fecha"/></label>
+      <label for="field5"><span>Mensaje Adicional</span><textarea name="Mensaje" class="textarea-field" maxlength="100"></textarea></label>
+      
+      <label><span> </span><input type="submit" value="Submit" /></label>
+      </form>
+      <br>
+      <br>
+        <div class="firma">
+          <p>Brian Martin Rios Nicoli</p>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
